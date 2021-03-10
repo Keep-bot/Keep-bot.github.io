@@ -104,7 +104,7 @@ function submit() {
 				get("chatType").style.display = "block";
 				get("typingStatus").style.display = "none";
 		} else{
-		    addChat("bot","<b>Error</b><div class= details>Internal error has occurred. Part or all of your data may haven't sent. Please try again.</div>");
+		    addChat("bot","<b>Error</b><div class= details>Internal error has occurred. Part or all of your data may haven't sent, Please try again.</div>");
 		    get("chatType").style.display = "block";
 		    get("typingStatus").style.display = "none";
 		}
