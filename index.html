@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title> Keep </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style/main.css">
+	<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"> </head>
+
+<body class=body>
+	<div class=allThings>
+		<div class=main>
+			<div class=header>
+				<div class=profile></div>
+				<div class=botInfo>
+					<div class=botName><strong>Keep</strong></div>
+					<div class=chatType id= chatType>bot</div>
+					<div class=typingStatus id=typingStatus>
+						<div class=dot1>•</div>
+						<div class=dot2>•</div>
+						<div class=dot3>•</div>
+						<div class=typing>typing</div>
+					</div>
+				</div>
+				<div class=chatMenu> <i class="fas fa-ellipsis-v"></i> </div>
+			</div>
+			<div id=about class=about>
+				<div class=center><b>This is the web end of Keep.</b></div>
+				<br> Keep is a simple platform to send data (text and files) from this web page directly to your telegram account, to the bot end.
+				<br>
+				<br> This can be used to keep (save) your files on telegram even when you have no access to your telegram.
+				<br>
+				<br>
+				<div class=center><b>The bot end of Keep is <a href="https://t.me/allkeep">@allkeepbot</a>.</b></div>
+				<br> <b>How to use keep?</b>
+				<br>
+				<div class=howTo> 1 Start our telegram Bot <a href="https://t.me/allkeep">@allkeepbot</a>;
+					<br> 2 You get your User Id, when you start the bot;
+					<br> 3 Enter your User Id and the data you want to save;
+					<br> 4 The data will be sent to your account via our bot. </div>
+			</div>
+			<form method=POST action="https://allkeep.000webhostapp.com/php/keeper2.php" id=keep enctype="multipart/form-data">
+				<input class=id id=id name=id type=text placeholder="Enter Your 'User Id' Here" oninput="validate()">
+				<div class=footer id=footer>
+					<div class=smile></div> <span class=text id=text role="textbox" contenteditable oninput="validate()"></span>
+					<input type=text id=hiddenText name=hiddenText hidden>
+					<label>
+						<div class=upload>
+							<div class=fileCount id=fileCount>66</div>
+						</div>
+						<input type=file multiple hidden name="files[]" id=files onchange="uploaded(); validate()"> </label>
+					<div class=send id="send" onclick="submit()"></div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script src="script/main.js"></script>
+	</body>
+</html>
