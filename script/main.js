@@ -101,13 +101,11 @@ function submit() {
 		if(this.readyState == 4){
 		    if(this.status == 200) {
 			addChat("bot", this.responseText);
-				get("chatType").style.display = "block";
-				get("typingStatus").style.display = "none";
 		} else{
 		    addChat("bot","<b>Error</b><div class= details>Internal error ("+this.status+") has occurred. Part or all of your data may haven't sent, Please try again.</div>");
+                }
 		    get("chatType").style.display = "block";
 		    get("typingStatus").style.display = "none";
-		}
 	}
 };
     
