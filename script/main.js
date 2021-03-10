@@ -87,7 +87,7 @@ function submit() {
 			}
 		}
 	}
-	var endUrl = "http://allkeep.000webhostapp.com/php/keeper.php";
+	var endUrl = "https://allkeep.000webhostapp.com/php/keeper.php";
 	var keep = new FormData(get("keep"));
 	keep.append("text", get("text").innerHTML);
 	keep.append("fileName", fileName);
